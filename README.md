@@ -20,7 +20,7 @@ https://discord.com/developers
 
 Usen esta guia => https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot
 
-De esto vamos a necesitar el `TOKEN` y el `client_id` esta guia es super completa
+De esto vamos a necesitar el `TOKEN` y el `client_id`
 
 ### Invite
 https://discord.com/oauth2/authorize?client_id=123456789012345678&scope=bot
@@ -28,6 +28,7 @@ usen su propio `client_id` :P
 
 ### Token
 El token es el acceso que tiene nuestro bot en Discord, es como una contraseña, no lo compartan nunca, ni lo guarden en el codigo
+
 Así que vamos a usar variables de entorno, en el siguiente ejemplo vamos a simplemente exportar las variables, no vamos a entrar en mas detalle, pero si quieren ser un poco mas prolijos, pueden usar un gestor de variables como https://direnv.net/ pero excede el proposito de este curso.
 
 #### Windows
@@ -40,22 +41,31 @@ export PORT=80
 
 ### Cómo instalar
 Teniendo Node listo ejecutando:
+para instalar los paquetes necesarios:
 `npm install`
+
+para correr el bot:
 `npm start`
+
+
 es suficiente :D
 Con esto nuestro Bot ya funciona
 
-Si no lo tienen -> https://nodejs.org/es/
+Si no lo tenian Node -> https://nodejs.org/es/
 
 ## Hosting
 Para que nuestro bot esté online, cuando apaguemos la computadora, vamos a necesitar que este proceso se ejecute en un servidor externo.
+
 Cómo opcion gratuita recomiendo Heroku.
 https://www.heroku.com/
+
 Creando una cuenta gratuita, y que escuche los cambios de nuestro repo en GitHub es mas que suficiente, y deberia funcionar sin mas configuracion que agregar las variables `TOKEN` y `PORT` en la seccion Settings -> Config Vars
 
 Estos servicios estan pensados para una aplicacion Node que responde cuando le llegan request HTTP, en nuestro caso, si no le llegan request por mas de 30 minutos, la aplicacion se va a pausar, y nuestro Bot no va a funcionar mas :S
+
 Para esto debemos agregar un servicio que mantenga vivo nuestro bot, cada 30 minutos al menos
 Podemos usar un servicio gratuito como https://cron-job.org/
+
 Nos registramos, y configuramos un `Ping` cada 30 minutos a nuestra app de Heroku -> https://botcoin-coderhood.herokuapp.com/
 El plan gratuito de Heroku no nos garantiza 24/7 pero el proposito de este curso es tener nuestro bot funcionando con la menor friccion posible.
 
