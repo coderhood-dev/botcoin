@@ -31,13 +31,20 @@ El token es el acceso que tiene nuestro bot en Discord, es como una contraseña,
 
 Así que vamos a usar variables de entorno, en el siguiente ejemplo vamos a simplemente exportar las variables, no vamos a entrar en mas detalle, pero si quieren ser un poco mas prolijos, pueden usar un gestor de variables como https://direnv.net/ pero excede el proposito de este curso.
 
+Ejecutamos los siguientes comandos en la consola, estos cambian dependiendo del Sistema operativo:
 #### Windows
-set TOKEN=untokenmuylargoconletrasy123123
-set PORT=80
+Para abrir la consola, podemos usar Ejecutar -> `cmd`
+Esto nos abre la terminal por defaullt en Windows
+`set TOKEN=untokenmuylargoconletrasy123123`
+
+`set PORT=80`
+
+Una buena idea es usar una mejor terminal, como https://cmder.net/ :)
 
 #### Linux/Mac
-export TOKEN=untokenmuylargoconletrasy123123
-export PORT=80
+`export TOKEN=untokenmuylargoconletrasy123123`
+
+`export PORT=80`
 
 ### Cómo instalar
 Teniendo Node listo ejecutando:
